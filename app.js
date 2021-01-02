@@ -7,38 +7,13 @@ const app = express()
 // add graphql express route handler
 app.use('/graphql', graphqlHTTP({
   // define options
-  schema
+  schema,
+  graphiql: true // use the graphiql tool in the browser
 }))
 
 app.listen(5000, () => {
   console.log('server is live on port 5000')
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
